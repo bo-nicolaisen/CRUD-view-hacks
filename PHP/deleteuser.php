@@ -13,10 +13,8 @@
 </head>
 
 <body>
-<h1>Edit user</h1>
+<h1>Delete user</h1>
 <?php
-
-
 
 include "db.php";
 
@@ -30,9 +28,17 @@ $stmt = $pdo->query('SELECT * FROM users WHERE id='.$id);
 
 $user = $stmt->fetch();
 }
-echo "<table><tr>";
-echo "<th>".$user['username']."</th>"."<th>" .$user['email']."</th>"." <th>".$user['password']."</th>";
-echo "</tr></table>";
+
+
+echo '<form action="edituser_commit.php" method="POST">User name:<br><input type="text" name="firstname" value="'.$user['username'].'"><br>
+  email:<br><input type="text" name="email" value="'.$user['email'].'"><br>
+  Password:<br><input type="text" name="password" value="'.$user['password'].'">
+   <input type="hidden" id="userid" name="userID" value='.$user['id'].'">
+    <input type="submit" value="Update">
+    <a href="../index.php">Fortryd</a>
+</form>';
+
+
  ?>
 
 

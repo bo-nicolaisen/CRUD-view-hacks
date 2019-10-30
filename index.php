@@ -32,7 +32,7 @@ foreach ($data as $row) {
 echo "<tr>";
 echo "<th>".$row['username']."</th>"."<th>" .$row['email']."</th>"." <th>".$row['password'].
 
-"</th>"."<th><a href='PHP/showuser.php?userID=".$row['id']."'>Edit</a></th>";
+"</th>"."<th><a href='PHP/edituser.php?userID=".$row['id']."'>Edit</a><a href='PHP/deleteuser.php?userID=".$row['id']."'>Delete</a></th>";
 echo "</tr>";
 }
 echo "</table>";
