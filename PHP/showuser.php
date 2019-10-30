@@ -16,10 +16,16 @@
 <h1>Edit user</h1>
 <?php
 
+
+
 include "db.php";
 
 if($pdo){
-$id=1;
+
+  // get id from
+
+$id=$_GET["userID"];
+
 $stmt = $pdo->query('SELECT * FROM users WHERE id='.$id);
 
 $user = $stmt->fetch();

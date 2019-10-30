@@ -27,10 +27,12 @@ $data = $stmt->fetchAll();
 if($data){
 
 echo "<table>";
+
 foreach ($data as $row) {
 echo "<tr>";
 echo "<th>".$row['username']."</th>"."<th>" .$row['email']."</th>"." <th>".$row['password'].
-"</th>"."<th><a href='PHP/showuser.php?usereID=".$row['id']."'>Edit</a></th>";
+
+"</th>"."<th><a href='PHP/showuser.php?userID=".$row['id']."'>Edit</a></th>";
 echo "</tr>";
 }
 echo "</table>";
