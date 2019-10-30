@@ -15,7 +15,7 @@ $username=$_POST["firstname"];
 $userEmail=$_POST["email"];
 $userpassword=$_POST["password"];
 
-$sql="UPDATE users SET username='$username', email='$userEmail',password='$userpassword' WHERE id=1";
+$sql="UPDATE users SET username='$username', email='$userEmail',password='$userpassword' WHERE id=$id";
 $stmt = $pdo->query($sql);
 
 //$user = $stmt->fetch();
